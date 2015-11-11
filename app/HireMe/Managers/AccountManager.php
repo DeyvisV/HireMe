@@ -16,4 +16,11 @@ class AccountManager extends BaseManager {
     return $rules;
   }
 
+  public function prepareData($data)
+  {
+    $data['full_name'] = strip_tags($data['full_name']);
+
+    return $data;
+  }
+
 }
